@@ -1,0 +1,31 @@
+﻿@model MvcCvSon.Models.entity.TBL_DENEYIM
+@{
+    ViewBag.Title = "deneyimgetir";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+
+<br />
+<h4>Deneyim Güncelleme Sayfası</h4>
+<br />
+<form method="post">
+    @Html.Label("Deneyim ID")
+    @Html.TextBoxFor(x => x.ID, new { @class = "form-control" })
+    <br />
+    @Html.Label("Başlık")
+    @Html.TextBoxFor(x => x.BASLIK, new { @class = "form-control" })
+    @Html.Label("Alt başlık")
+    @Html.TextBoxFor(x => x.ALTBASLIK, new { @class = "form-control" })
+    @Html.Label("Tarih")
+    @Html.TextBoxFor(x => x.TARIH, new { @class = "form-control" })
+    @Html.Label("Açıklama")
+    @Html.TextAreaFor(x => x.ACIKLAMA, new { @class = "form-control" })
+<br />
+    <button class="btn btn-info">Güncelle</button>
+
+</form>
+
+
+
+

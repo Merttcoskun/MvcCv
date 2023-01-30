@@ -1,0 +1,33 @@
+﻿@using MvcCvSon.Models.entity
+@model List<TBL_HOBILER>
+
+<div class="resume-section-content">
+    <h2 class="mb-5">YABANCI DİL BİLGİM</h2>
+
+
+
+    <ul class="fa-ul mb-5">
+        @foreach (var x in Model)
+        {
+            <li >
+                <span class="fa-li"><i class="fas fa-check"></i></span>
+                @x.ACIKLAMA1
+            </li>
+            <li>
+                <span class="fa-li"><i></i></span>
+                @x.ACIKLAMA2
+            </li>
+            <li>
+                <span class="fa-li"><i></i></span>
+                @x.ACIKLAMA3
+            </li>
+            <li>
+                <span class="fa-li"><i></i></span>
+                @x.ACIKLAMA4
+            </li>
+        }
+
+    </ul>
+</div>
+
+

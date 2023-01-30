@@ -1,0 +1,24 @@
+﻿@using MvcCvSon.Models.entity
+@model List<TBL_HOBILER>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<br />
+<h2>Hobi Düzenleme Sayfası</h2>
+<br />
+<form method="post">
+    @foreach (var item in Model)
+    {
+        <label>Açıklama 1</label>
+<textarea rows="1" class="form-control" name="ACIKLAMA1">@item.ACIKLAMA1</textarea>
+        <label>Açıklama 2</label>
+<textarea rows="1" class="form-control" name="ACIKLAMA2">@item.ACIKLAMA2</textarea>
+        <label>Açıklama 3</label>
+<textarea rows="1" class="form-control" name="ACIKLAMA3">@item.ACIKLAMA3</textarea>
+        <label>Açıklama 4</label>
+<textarea rows="1" class="form-control" name="ACIKLAMA4">@item.ACIKLAMA4</textarea>
+    }
+    <br />
+    <button class="btn btn-success">Güncelle</button>
+</form>

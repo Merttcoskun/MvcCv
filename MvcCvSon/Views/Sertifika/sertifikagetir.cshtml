@@ -1,0 +1,26 @@
+﻿@model MvcCvSon.Models.entity.TBL_SERTIFIKA
+@{
+    ViewBag.Title = "sertifikagetir";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+
+
+<br />
+<h4>Sertifika Düzenleme Sayfası</h4>
+<br />
+<form method="post">
+
+    @Html.Label("Sertifika Açıklaması")
+    @Html.TextBoxFor(x => x.ACIKLAMA, new { @class = "form-control" })
+    @Html.Label("Tarih")
+    @Html.TextBoxFor(x => x.TARIH, new { @class = "form-control" })
+    <br />
+
+    <button class="btn btn-success">Güncelle</button>
+    <a href="/Sertifika/sertifikasil/@ViewBag.d" class="btn btn-danger">Sil</a>
+</form>
+
+
+

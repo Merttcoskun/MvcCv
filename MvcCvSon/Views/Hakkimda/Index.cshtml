@@ -1,0 +1,40 @@
+﻿@using MvcCvSon.Models.entity
+@model List<TBL_HAKKINDA>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+
+<br />
+<h2>Hakkımda Düzenleme Sayfası</h2>
+<br />
+<form method="post">
+    @foreach (var item in Model)
+    {
+        <label>AD</label>
+        <input type="text" name="AD" value="@item.AD" class="form-control" />
+        <br />
+        <label>SOYAD</label>
+        <input type="text" name="SOYAD" value="@item.SOYAD" class="form-control" />
+        <br />
+        <label>ADRES</label>
+        <input type="text" name="ADRES" value="@item.ADRES" class="form-control" />
+        <br />
+        <label>TELEFON</label>
+        <input type="text" name="TELEFON" value="@item.TELEFON" class="form-control" />
+        <br />
+        <label>MAİL ADRESİ</label>
+        <input type="text" name="MAIL" value="@item.MAIL" class="form-control" />
+        <br />
+        <label>RESİM</label>
+        <input type="text" name="RESIM" value="@item.RESIM" class="form-control" />
+        <br />
+        <label>AÇIKLAMA</label>
+<textarea rows="5" class="form-control" name="ACIKLAMA">@item.ACIKLAMA</textarea>
+    }
+    <br />
+    <button class="btn btn-success">Güncelle</button>
+</form>
+
